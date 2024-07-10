@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem Komiwojażera</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>Problem Komiwojażera</h1>
+
+    <!-- SCHEMAT BLOKOWY -->
+    <div class="container">
+      <div class="block-diagram">
+        <button class="show-modal button-decoration">Schemat blokowy</button>
+      </div>
+
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <img
+          class="img-block-model"
+          src="../schematy/komiwojażer.png"
+          alt="Schemat blokowy problemu komiwojażera"
+          style="width: 30%" />
+      </div>
+      <div class="overlay hidden"></div>
+
+      <!-- FORMULARZ -->
+      <form id="tspForm">
+        <label for="numCities">Liczba miast:</label><br />
+        <input
+          type="number"
+          id="numCities"
+          name="numCities"
+          min="2"
+          value="5"
+          required /><br /><br />
+        <button
+          class="button-decoration"
+          type="button"
+          onclick="generateFields()">
+          Generuj Pola</button
+        ><br /><br />
+        <div id="cityFields"></div>
+        <div id="distanceFields"></div>
+        <button class="button-decoration" type="button" onclick="solveTSP()">
+          Rozwiąż Problem
+        </button>
+      </form>
+      <div class="text-decoration" id="result"></div>
+
+      <!-- POWRÓT -->
+      <a href="../index.html">Powrót</a>
+    </div>
+
+    <!-- SKRYPTY -->
+    <script src="./script.js"></script>
+    <script src="../modal_block_diagram.js"></script>
+  </body>
+</html>

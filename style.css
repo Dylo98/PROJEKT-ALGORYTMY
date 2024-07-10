@@ -1,0 +1,148 @@
+/*
+    PRIMARY COLOR: #343a40;
+    BUTTON COLOR: #97760f;
+    SHADES HOVER COLOR: #7e620d;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #343a40;
+  text-align: center;
+}
+
+/* ELEMENTY HTML */
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+a:link,
+a:visited {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: 'bebas neue', Arial, Helvetica, sans-serif;
+  border: 0;
+  background-color: #97760f;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transform: scale(100%);
+  transition: 0.5s ease;
+}
+
+a:hover,
+a:active {
+  background-color: #7e620d;
+  transform: scale(120%);
+}
+
+input {
+  padding: 10px;
+  width: 4em;
+  max-width: 200px;
+  border: 1px solid #555555;
+  border-radius: 4px;
+  background-color: #444444;
+  color: wheat;
+}
+
+.text-decoration,
+label {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.button-decoration {
+  /* width: 100%; */
+  padding: 10px 20px;
+  font-size: 2rem;
+  font-family: 'bebas neue', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  background-color: #97760f;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.button-decoration:hover {
+  background-color: #7e620d;
+}
+
+#tolerance,
+#min,
+#max,
+#monteCarloForm input {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+/* PAGE LAYOUT*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* SCHEMAT BLOKOWY */
+.img-block-model {
+  width: 50%;
+  height: 50%;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  display: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  background-color: #fff;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}

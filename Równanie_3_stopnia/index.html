@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Równanie 3 stopnia</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>Równanie 3 Stopnia</h1>
+
+    <!-- SCHEMAT BLOKOWY -->
+    <div class="container">
+      <div class="block-diagram">
+        <button class="show-modal button-decoration">Schemat blokowy</button>
+      </div>
+
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <img
+          class="img-block-model"
+          src="../schematy/3stopnia.png"
+          alt="Schemat blokowy algorytmu 3 stopnia" />
+      </div>
+      <div class="overlay hidden"></div>
+
+      <!-- FORMULARZ -->
+      <div class="polynomial-equation text-decoration">
+        <input type="number" value="0" /> x<sup>3</sup> +
+        <input type="number" value="0" /> x<sup>2</sup> +
+        <input type="number" value="0" /> x +
+        <input type="number" value="0" /> = 0
+      </div>
+      <input
+        class="btn--polynomial-equation button-decoration"
+        type="button"
+        value="Oblicz"
+        onclick="solvePolynomialEquation();" />
+      <div class="solution text-decoration">
+        Rozwiązania:
+        <div id="polynomial-solution"></div>
+      </div>
+
+      <!-- POWRÓT -->
+      <a href="../index.html">Powrót</a>
+    </div>
+
+    <!-- SKRYPTY -->
+    <script src="./script.js"></script>
+    <script src="../modal_block_diagram.js"></script>
+  </body>
+</html>

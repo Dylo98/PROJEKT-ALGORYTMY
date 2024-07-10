@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pierwiastki Wielomianu</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>Znajdowanie Pierwiastków Wielomianu</h1>
+
+    <!-- SCHEMAT BLOKOWY -->
+    <div class="container">
+      <div class="block-diagram">
+        <button class="show-modal button-decoration">Schemat blokowy</button>
+      </div>
+
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <img
+          class="img-block-model"
+          src="../schematy/Wielomian.png"
+          alt="Schemat blokowy algorytmu na znajdowanie pierwiastków wielomianiu 5 stopnia" />
+      </div>
+      <div class="overlay hidden"></div>
+
+      <form id="polyForm">
+        <label for="coefficients"
+          >Wprowadź współczynniki wielomianu (a, b, c, d, e, f):</label
+        ><br />
+        <div class="equation">
+          <input type="number" class="coefficient-input" id="a" value="0" />
+          <span class="text-decoration">x<sup>5</sup> +</span>
+          <input type="number" class="coefficient-input" id="b" value="0" />
+          <span class="text-decoration">x<sup>4</sup> +</span>
+          <input type="number" class="coefficient-input" id="c" value="0" />
+          <span class="text-decoration">x<sup>3</sup> +</span>
+          <input type="number" class="coefficient-input" id="d" value="0" />
+          <span class="text-decoration">x<sup>2</sup> +</span>
+          <input type="number" class="coefficient-input" id="e" value="0" />
+          <span class="text-decoration">x +</span>
+          <input type="number" class="coefficient-input" id="f" value="0" />
+          <span class="text-decoration">= 0</span>
+        </div>
+        <br />
+        <label for="tolerance">Wprowadź tolerancję (ε):</label><br />
+        <input
+          type="number"
+          id="tolerance"
+          name="tolerance"
+          step="0.000001"
+          required /><br /><br />
+        <label for="min">Wprowadź minimalną wartość x (min):</label><br />
+        <input type="number" id="min" name="min" required /><br /><br />
+        <label for="max">Wprowadź maksymalną wartość x (max):</label><br />
+        <input type="number" id="max" name="max" required /><br /><br />
+        <button class="button-decoration" type="button" onclick="findRoots()">
+          Znajdź Pierwiastki
+        </button>
+      </form>
+      <div id="result" class="text-decoration"></div>
+
+      <!-- POWRÓT -->
+      <a href="../index.html">Powrót</a>
+    </div>
+
+    <!-- SKRYPTY -->
+    <script src="./script.js"></script>
+    <script src="../modal_block_diagram.js"></script>
+  </body>
+</html>

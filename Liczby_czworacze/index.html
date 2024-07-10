@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liczby czworacze</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>Liczby czworacze</h1>
+
+    <!-- SCHEMAT BLOKOWY -->
+    <div class="container">
+      <div class="block-diagram">
+        <button class="show-modal button-decoration">Schemat blokowy</button>
+      </div>
+
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <img
+          class="img-block-model"
+          src="../schematy/czworacze.png"
+          alt="Schemat blokowy liczb czworaczych i liczb pierwszych"
+          style="width: 80%" />
+      </div>
+      <div class="overlay hidden"></div>
+
+      <form id="formularz" onsubmit="onSubmit(event)">
+        <label for="min">Minimalna liczba:</label><br />
+        <input type="number" id="min" name="min" required />
+        <br />
+        <label for="max">Maksymalna liczba:</label>
+        <input type="number" id="max" name="max" required />
+        <br />
+        <button class="button-decoration" type="submit">
+          Znajdź liczby czworacze
+        </button>
+      </form>
+      <h2 class="text-decoration">Wynik:</h2>
+      <div class="text-decoration" id="result"></div>
+
+      <!-- POWRÓT -->
+      <a href="../index.html">Powrót</a>
+    </div>
+
+    <!-- SKRYPTY -->
+    <script src="./script.js"></script>
+    <script src="../modal_block_diagram.js"></script>
+  </body>
+</html>

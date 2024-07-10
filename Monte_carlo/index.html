@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metoda Monte Carlo - Całkowanie</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>Metoda Monte Carlo - Całkowanie</h1>
+
+    <!-- SCHEMAT BLOKOWY -->
+    <div class="container">
+      <div class="block-diagram">
+        <button class="show-modal button-decoration">Schemat blokowy</button>
+      </div>
+
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <img
+          class="img-block-model"
+          src="../schematy/MonteCarlo.png"
+          alt="Schemat blokowy algorytmu Monte Carlo" />
+      </div>
+      <div class="overlay hidden"></div>
+
+      <!-- FORMULARZ -->
+      <form id="monteCarloForm">
+        <label for="function"
+          >Wprowadź funkcję f(x) (użyj Math.sin, Math.cos, itp.):</label
+        ><br />
+        <input
+          type="text"
+          id="function"
+          name="function"
+          value="Math.sin(x) + Math.sin(2*x) + Math.sin(3*x)"
+          required /><br /><br />
+        <label for="a">Wprowadź wartość a:</label><br />
+        <input
+          type="number"
+          id="a"
+          name="a"
+          step="0.01"
+          value="0"
+          required /><br /><br />
+        <label for="b">Wprowadź wartość b:</label><br />
+        <input
+          type="number"
+          id="b"
+          name="b"
+          step="0.01"
+          value="6.28"
+          required /><br /><br />
+        <label for="n">Wprowadź liczbę punktów (n):</label><br />
+        <input
+          type="number"
+          id="n"
+          name="n"
+          step="1"
+          value="10000"
+          required /><br /><br />
+        <button
+          class="button-decoration"
+          type="button"
+          onclick="calculateMonteCarlo()">
+          Oblicz
+        </button>
+      </form>
+      <div class="text-decoration" id="result"></div>
+      <!-- POWRÓT -->
+      <a href="../index.html">Powrót</a>
+    </div>
+
+    <!-- SKRYPTY -->
+    <script src="./script.js"></script>
+    <script src="../modal_block_diagram.js"></script>
+  </body>
+</html>
